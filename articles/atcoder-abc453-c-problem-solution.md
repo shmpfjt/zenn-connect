@@ -74,20 +74,27 @@ int main()
     int ans = 0;
     vector<int> l(n);
     for(int i = 0; i < n; i++) cin >> l[i];
+
+    // bit全探索
     for(int bit = 0; bit < (1<<n); bit++)
     {
-        long long now = 0;
-        int cnt = 0;
+        long long now = 0; // 現在の座標（32bit変数を超える可能性がある）
+        int cnt = 0; // 通り過ぎた回数
+
+        // パターンが決まったのでシミュレート
         for(int i = 0; i < n; i++)
         {
-            bool p = now >= 0;
+            bool p = now >= 0; // 座標の正負
             if(bit & (1<<i)) now += l[i];
             else now -= l[i];
+
+            // 正負が変化したら通り過ぎたとカウント
             if(p && now < 0) cnt++;
             else if(!p && now >= 0) cnt++;
         }
-        ans = max(ans, cnt);
+        ans = max(ans, cnt); // 最大値を更新する
     }
+
     cout << ans << endl;
 }
 ```
