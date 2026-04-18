@@ -68,13 +68,13 @@ using namespace std;
 
 int main()
 {
+    // 入力
     int n;
     cin >> n;
-
-    int ans = 0;
     vector<int> l(n);
     for(int i = 0; i < n; i++) cin >> l[i];
 
+    int ans = 0;
     // bit全探索
     for(int bit = 0; bit < (1<<n); bit++)
     {
@@ -84,7 +84,9 @@ int main()
         // パターンが決まったのでシミュレート
         for(int i = 0; i < n; i++)
         {
-            bool p = now >= 0; // 座標の正負
+            bool p = now >= 0; // 移動前の座標の正負を保持
+
+            // 座標の移動
             if(bit & (1<<i)) now += l[i];
             else now -= l[i];
 
@@ -95,6 +97,7 @@ int main()
         ans = max(ans, cnt); // 最大値を更新する
     }
 
+    // 出力
     cout << ans << endl;
 }
 ```
