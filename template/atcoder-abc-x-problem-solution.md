@@ -1,5 +1,5 @@
 ---
-title: "【AtCoder】ABC D問題 解説"
+title: "【AtCoder】ABC X問題 解説"
 emoji: "🧩"
 type: "tech"
 topics: ["atcoder", "競技プログラミング"]
