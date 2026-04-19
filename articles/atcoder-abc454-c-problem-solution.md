@@ -7,7 +7,7 @@ published: false
 ---
 
 # 問題概要
-[問題はこちら](https://atcoder.jp/contests/abc453/tasks/abc454_c)
+[問題はこちら](https://atcoder.jp/contests/abc454/tasks/abc454_c)
 
 アイテムを1から順番に物々交換していき、持っているアイテムとしてあり得る種類数の最大値を求める問題。
 
