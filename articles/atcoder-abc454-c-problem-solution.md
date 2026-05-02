@@ -3,7 +3,7 @@ title: "【AtCoder】ABC454 C問題 解説"
 emoji: "🧩"
 type: "tech"
 topics: ["atcoder", "競技プログラミング"]
-published: false
+published: true
 ---
 
 この記事では、ABC454 C問題をグラフとして捉え、到達可能な頂点数を数えることで解く方法を解説します。
